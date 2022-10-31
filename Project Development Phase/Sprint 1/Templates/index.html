@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    {% block title%}
+    {% endblock %}
+  </title>
+  {% block head %}
+  <!-- Meta Informations -->
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <!-- CSS Files -->
+  <link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet" type="text/css" />
+  <!-- JS Files -->
+  <script src="https://kit.fontawesome.com/3830746d6e.js"></script>
+  <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+  {% endblock %}
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <span><b>IMS</b></span>
+    <ul id="nav-items">
+      <li class="nav-item" id="dashboard">
+        <i class="fa-solid fa-gauge"></i>
+        &nbsp;&nbsp;Dashboard
+      </li>
+      <li class="nav-item" id="products">
+        <i class="fa-solid fa-boxes-stacked"></i>
+        &nbsp;&nbsp;Products
+      </li>
+      <li class="nav-item" id="people">
+        <i class="fa-solid fa-people-group"></i>
+        &nbsp;&nbsp;People
+      </li>
+      <li class="nav-item" id="bell">
+        <i class="fa-solid fa-bell"></i>
+        <span id="badge">0</span>
+      </li>
+      <li class="nav-item">
+        <i class="fa-solid fa-expand"></i>
+      </li>
+      <a href="/entry">
+        <li class="nav-item">
+          <i class="fa-solid fa-right-from-bracket"></i>
+        </li>
+      </a>
+    </ul>
+  </nav>
+  <!-- Navbar ends -->
+{% block content %}
+{% endblock %}
+  <!-- Footer -->
+  <footer>
+    <!-- Footer Content -->
+    <div id="footer-content">
+      <!-- Left part -->
+      <div id="footer-left">
+        
+        <div class="footer-card">
+          <i class="fas fa-video"></i>
+          <div>
+            <h4>DemoVideo</h4>
+            <span>For the demo Click here!</span>
+          </div>
+        </div>
+
+        <div class="footer-card">
+          <i class="fab fa-github"></i>
+          <div>
+            <h4>Github</h4>
+            <span>For reference see here</span>
+          </div>
+        </div>
+
+        <div class="footer-card">
+          <i class="fa-solid fa-address-card"></i>
+          <div>
+            <h4>About us</h4>
+            <span>For more Informations Click here</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- Left part ends -->
+       <!-- Right part - Reachus form -->
+      <div id="footer-right">
+        <div>
+          <h3>ReachUs</h3>
+          <span>For more details send your email</span>
+        </div>
+        <div id="reachus-form">
+          <form action="#" id="reachus-form-input">
+            
+            <input type="text" placeholder="Email Address" />
+            <button><i class="fa-sharp fa-solid fa-paper-plane"></i></button>
+           
+          </form>
+        </div>
+      </div>
+      <!-- Right part - Reachus Form ends -->
+    </div>
+    <!-- Footer Content ends -->
+    
+    <span id="footer-copyright">
+      All &copy; copyrights are reserved.
+    </span>
+
+  </footer>
+  <!-- Footer ends -->
+</body>
+
+</html>
