@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body%}
+<style>
+    body {
+      background-image: url('https://alphacoders.s3.jp-tok.cloud-object-storage.appdomain.cloud/back.jpeg');
+    }
+    </style><br><br>
+<div class="jumbotron mt-4">
+    <h7 class="display-4">Inventory Management System for Retailers</h7><br><br>
+    {% if session.logged_in == NULL %}
+        <center><a href="/register" class="btn btn-primary btn-lg">Register</a>
+        <a href="/login" class="btn btn-success btn-lg">Login</a></center>
+    {% endif %}<br>
+    <h1>  Developed by </h1>
+    <ul>
+        <h5>
+            <li>VETHANATHAN V K</li>
+            <li>SRIVATSAN KUMAR S</li>
+            <li>VIGNESH N</li>
+            <li>SHREE KISHORE S</li>
+        </h5>
+    </ul>
+</div>
+{% endblock %}
